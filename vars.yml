@@ -22,3 +22,15 @@
       vars:
           url: www.google.com
 
+- name: declaring a variable in another file
+  hosts: all
+  connection: local
+  vars_files: 
+         - var.yml
+  tasks:
+    - name: access a avariable
+      ansible.builtin.debug:
+        msg: url == {{url}}
+
+
+
