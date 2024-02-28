@@ -1,0 +1,10 @@
+- name: variable accessing
+  hosts: all
+  become: yes
+  vars:
+    url: www.google.com
+    tasks:
+      - name: access variable
+        ansible.builtin.debug:
+          msg: url=={{url}}
+
