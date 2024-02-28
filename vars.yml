@@ -10,7 +10,6 @@
           msg: url == {{url}}
 
 
----
 - name: declaring a variable on the play level
   hosts: all
   become: yes
