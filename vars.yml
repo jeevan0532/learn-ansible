@@ -1,10 +1,25 @@
-- name: variable accessing
+- name: declaring a variable on the play level
   hosts: all
   become: yes
+  connection: local
   vars:
     url: www.google.com
   tasks:
     - name: access variable
       ansible.builtin.debug:
           msg: url == {{url}}
+
+
+---
+- name: declaring a variable on the play level
+  hosts: all
+  become: yes
+  connection: local
+  tasks:
+    - name: access variable
+      ansible.builtin.debug:
+          msg: url == {{url}}
+
+      vars:
+          url: www.google.com
 
