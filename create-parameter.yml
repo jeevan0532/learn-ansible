@@ -1,5 +1,5 @@
 - name: create parameter
-  hosts: local
+  hosts: localhost
   connection: ssh
   tasks: 
     - community.aws.ssm_parameter:
