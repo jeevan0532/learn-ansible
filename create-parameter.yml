@@ -9,4 +9,4 @@
       loop:
        - { name: "jeevan", value: "maried" }
        - { name: "nikhitha", value: "married"}
-       - { name: "prayush ram", value: "6 months old"}
+       - { name: "prayush-ram", value: "6-months-old"}
