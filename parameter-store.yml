@@ -1,0 +1,6 @@
+- name: read a file from parameter store
+  connection: ssh
+  hosts: localhost
+  tasks: 
+     ansible.builtin.debug:
+             msg: "{{ lookup('aws_ssm','sample', 'Hello') }}"
