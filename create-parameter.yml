@@ -1,0 +1,11 @@
+- name: create parameter
+  hosts: local
+  connection: ssh
+  tasks: 
+     community.aws.ssm_parameter:
+      name: "{{ item.name }}"
+      value: "{{ item.value }}"
+     loop:
+       - { name: "jeevan", value: "maried" }
+       - { name: "nikhitha", value: "married"}
+       - { name: "prayush ram", value: "6 months old"}
