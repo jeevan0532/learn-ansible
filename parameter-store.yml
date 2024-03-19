@@ -2,5 +2,5 @@
   connection: ssh
   hosts: localhost
   tasks: 
-     ansible.builtin.debug:
-             msg: "{{ lookup('aws_ssm','sample', 'Hello') }}"
+     - ansible.builtin.debug:
+               msg: "{{ lookup('aws_ssm','sample', region='us-east-1') }}"
